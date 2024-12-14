@@ -1,3 +1,5 @@
+[![Run Tests](https://github.com/lays147/go-exercise/actions/workflows/tests.yaml/badge.svg)](https://github.com/lays147/go-exercise/actions/workflows/tests.yaml)
+
 # Golang Challenge
 
 To run the tests please use:
