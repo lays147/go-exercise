@@ -1,0 +1,23 @@
+name: Run Tests
+
+on:
+  push:
+    branches:
+      main
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.23"
+
+      - name: Install deps
+        run: go install gotest.tools/gotestsum@latest
+
+      - name:
+        run: gotestsum --format testname -- -covermode=atomic ./...
